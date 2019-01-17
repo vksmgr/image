@@ -1,8 +1,13 @@
 # Image processing Class Assignmnts
 import src.class_ass.ch1 as ch1
+import src.class_ass.videos as vdo
+import src.class_ass.arithmetic as arth
+
 
 def main():
-    ch1.callMe()
+    # ch1.callMe()
+    # vdo.callMe()
+    arth.callMe()
     pass
 
 if __name__ == '__main__':
