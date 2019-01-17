@@ -3,8 +3,10 @@ import numpy as np
 
 
 def callMe():
-    sumaary()
+    # sumaary()
+    usingmatplot()
     pass
+
 
 
 ## Reading an image
@@ -27,6 +29,8 @@ def imwrite(image_name, image):
 def sumaary():
     img = imread("dog.jpg", 0)
     imshow(img)
+    print("Shape of width : {}".format(img.shape[0]))
+    print("Shape of height : {}".format(img.shape[1]))
     key = cv2.waitKey(0) & 0xFF
     if key == 27:
         print("entred")
@@ -34,4 +38,13 @@ def sumaary():
     elif key == ord('s'):
         imwrite("myimage.png", img)
         cv2.destroyAllWindows()
+    pass
+
+# diplaying image through matplot lib
+import numpy as np
+from matplotlib import  pyplot as plt
+def usingmatplot():
+    img = imread("image.png", 1)
+    plt.imshow(img)
+    plt.show()
     pass
