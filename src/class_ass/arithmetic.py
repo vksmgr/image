@@ -5,7 +5,8 @@ import src.class_ass.ch1 as ch1
 
 
 def callMe():
-    arithmetics()
+    # arithmetics()
+    bitwise()
     pass
 
 
@@ -43,4 +44,24 @@ def arithmetics():
     ch1.imshow(resu, "image add with wight")
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+    pass
+
+
+## Bitwise operations on the images
+## usefull for extracting any part of an image
+## to change the perticular region of an image
+def bitwise():
+    # reading images
+    img1 = ch1.imread('dog2.jpg', 1)
+    img2 = ch1.imread('dog3.jpg', 1)
+    and_img = cv2.bitwise_and(img1, img2)
+    or_img = cv2.bitwise_or(img1, img2)
+    xor_img = cv2.bitwise_xor(img1, img2)
+    cv2.imshow('and', and_img)
+    cv2.imshow('or', or_img)
+    cv2.imshow('xor', xor_img)
+    cv2.imshow('res', img1)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
     pass
