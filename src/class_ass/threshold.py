@@ -14,15 +14,15 @@ def thr():
     # _, img_show1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)
     # _, img_show2 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY_INV)
     # _, img_show3 = cv2.threshold(img, 127, 255, cv2.THRESH_TRUNC)
-    # _, img_show4 = cv2.threshold(img, 127, 255, cv2.THRESH_TOZERO)
+    _, img_show4 = cv2.threshold(img, 0, 255, cv2.THRESH_OTSU)
     #
     # cv2.imshow("orignal", img)
     # cv2.imshow("image1", img_show1)
     # cv2.imshow("image2", img_show2)
     # cv2.imshow("image3", img_show3)
-    # cv2.imshow("image4", img_show4)
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
+    cv2.imshow("image4", img_show4)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
     ## Adptive threshold
     img = cv2.medianBlur(img, 5)
