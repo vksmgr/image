@@ -5,6 +5,7 @@ import src.class_ass.imgpross as imgpross
 import src.class_ass.arithmetic as arth
 import src.class_ass.derivatives as der
 import src.class_ass.threshold as thr
+import src.HW.hw1 as hw1
 
 
 def main():
@@ -13,7 +14,8 @@ def main():
     # arth.callMe()
     # imgpross.callMe()
     # thr.callMe()
-    der.callMe()
+    # der.callMe()
+    hw1.callMe()
     pass
 
 
