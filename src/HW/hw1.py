@@ -42,6 +42,7 @@ def f(x):
 
 # function for the question 2
 # writing the function to print the image histogram
+# this function will take image, numberofbins and the range of the input int the image
 def printHisto(image, bins, range):
     plt.hist(image.ravel(), bins=bins, range=range)
     plt.show()
