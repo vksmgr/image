@@ -8,6 +8,7 @@ def callMe():
     img = cv2.imread("/home/hp/PycharmProjects/image/data/hw/hw2.png", 0)
     showImgComp(img, average_filter(img))
     showImgComp(img, gaussian_filter(img))
+    showImgComp(img, q2(img, gaussian_filter(img), 0.5))
     pass
 
 
@@ -22,6 +23,7 @@ def showImgComp(orignal, new):
     pass
 
 
+### Question 1:
 # Write a Python function that uses the convolution method to perform spatial filtering on an
 # image. Start by padding your image with 5 rows and columns to the border of the image,
 # the value of the padding should be 0. Apply an averaging filter and Gaussian filter with a
@@ -62,4 +64,16 @@ def gaussian_filter(img):
             b = sum
             img_out.itemset((i, j), b)
 
+    return img_out
+
+### Question 2:
+# Image sharpening by Unsharp Masking and Highboost Filtering
+# Write a Python function to perform the following steps
+# 1. Blur the original image (Output of the first exercise)
+# 2. Subtract the blurred image from the original (mask)
+# 3. Add the mask to the original
+
+def q2(orignal, blured, k):
+    g_mask = orignal - blured
+    img_out = orignal + k * g_mask
     return img_out
