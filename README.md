@@ -1,8 +1,10 @@
 ## Home Work 2
 
 <p dir="ltr" id="docs-internal-guid-fa0662fa-7fff-b4e3-2626-9dfa579ea865">
-    Assignment-II
+    Assignment-II 
+
 </p>
+[Solution](https://github.com/vksmgr/image/blob/master/src/HW/hw2.py)
 <p dir="ltr">
 Complete the following and send report to    <a href="mailto:s.domnic@gmail.com">s.domnic@gmail.com</a> on or before
     11/2/2019
